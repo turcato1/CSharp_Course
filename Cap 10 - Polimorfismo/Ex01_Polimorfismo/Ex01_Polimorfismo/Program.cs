@@ -9,7 +9,7 @@ namespace Ex01_Polimorfismo
     {
         static void Main(string[] args)
         {
-            List<Product> ProdList = new List<Product>();
+            List<Product> prodList = new List<Product>();
 
             Console.Write("Enter the number of products: ");
             int nprod = int.Parse(Console.ReadLine());
@@ -30,15 +30,15 @@ namespace Ex01_Polimorfismo
                     case 'i': //Importado
                         Console.Write("Customs fee: ");
                         double inputCustFee = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                        ProdList.Add(new ImportedProduct(inputName, inputPrice, inputCustFee));
+                        prodList.Add(new ImportedProduct(inputName, inputPrice, inputCustFee));
                         break;
                     case 'u': //Usado
                         Console.Write("Manufacture Date (DD/MM/YYYY): ");
                         DateTime inputManDate = DateTime.Parse(Console.ReadLine());
-                        ProdList.Add(new UsedProduct(inputName, inputPrice, inputManDate));
+                        prodList.Add(new UsedProduct(inputName, inputPrice, inputManDate));
                         break;
                     default:
-                        ProdList.Add(new Product(inputName, inputPrice));
+                        prodList.Add(new Product(inputName, inputPrice));
                         break;
                 }
             }
@@ -46,7 +46,7 @@ namespace Ex01_Polimorfismo
             //Exibe produtos, tipos e preços
             Console.WriteLine();
             Console.WriteLine("PRICE TAGS:");
-            foreach (Product p in ProdList)
+            foreach (Product p in prodList)
             {
                 Console.WriteLine(p.PriceTag());
             }

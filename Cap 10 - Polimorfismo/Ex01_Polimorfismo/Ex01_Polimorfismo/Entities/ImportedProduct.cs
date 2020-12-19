@@ -9,10 +9,10 @@ namespace Ex01_Polimorfismo.Entities
         public ImportedProduct()
         {
         }
-        public ImportedProduct(string name, double price, double customsfee)
+        public ImportedProduct(string name, double price, double customsFee)
             : base(name, price)
         {
-            CustomsFee = customsfee;
+            CustomsFee = customsFee;
         }
         public double TotalPrice()
         {

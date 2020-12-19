@@ -6,6 +6,7 @@ namespace Ex01_Polimorfismo.Entities
     class UsedProduct : Product
     {
         public DateTime ManufactureDate { get; set; }
+        
         public UsedProduct()
         {
         }
